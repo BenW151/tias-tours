@@ -80,9 +80,6 @@ body {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-
-
-
   .logo {
     color: #FFFFFF;
   }
