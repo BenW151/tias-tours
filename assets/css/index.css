@@ -29,6 +29,8 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: var(--accent-secondary);
+  transition: opacity 0.25s, height 0.25s ease-out;
+
 }
 
 #hero-container {
@@ -78,6 +80,11 @@ body {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+
+  .logo {
+    color: #FFFFFF;
+  }
+
   #hero-container {
     grid-template-columns: 1fr; /* Adjust grid for smaller screens */
   }
@@ -128,6 +135,10 @@ nav {
   display: flex;
   align-items: center;
   padding: var(--spacing-3) var(--spacing-3);
+}
+
+.scrolled .logo {
+  opacity: 0;
 }
 
 .navigation-items {
@@ -233,25 +244,19 @@ nav {
 #about-container {
   padding: 48px 0;
   width: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 auto; /* Center the container */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns for larger screens */
 }
 
 .about {
   padding: 20px;
   display: flex;
   flex-direction: column;
-
 }
 
-.about h3 {
-  margin-top: 10px;
-}
-
-.about p {
+.about h3, .about p {
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -266,7 +271,7 @@ nav {
 }
 
 .about .button {
-  justify-content: center; 
+  justify-content: center;
   margin: var(--spacing-3) auto;
   display: flex;
   padding: 10px 20px;
@@ -274,6 +279,34 @@ nav {
   width: 100px;
   background: var(--accent-main);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #about-container {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+  }
+  
+  .about img {
+    max-width: 100%; /* Allow images to scale up on smaller screens */
+    max-height: 100%;
+  }
+
+  .about .button {
+    width: auto; /* Adjust button width to fit content on smaller screens */
+    padding: 10px 20px; /* Adjust padding if necessary for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #about-container {
+    padding: 24px 0; /* Reduce padding for very small screens */
+  }
+  
+  .about {
+    padding: 10px; /* Reduce padding within each .about section for smaller screens */
+  }
+}
+
 
 .instagram-widget {
   margin: 50px;
@@ -286,9 +319,10 @@ footer {
 .footer-container {
   position: relative;
   width: 100%;
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr);
+  display: grid;
   gap: 20px;
+  /* Adjust the grid layout for different screen sizes */
+  grid-template-columns: repeat(4, 1fr); /* Default layout for larger screens */
 }
 
 .footer-section {
@@ -296,7 +330,7 @@ footer {
 }
 
 .footer-section ul {
-  list-style-type: none; 
+  list-style-type: none;
   margin: 0;
   padding-left: var(--spacing-3);
 }
@@ -317,13 +351,47 @@ footer {
 }
 
 .copywrite {
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
 }
 
 .designed-by {
   color: var(--accent-main);
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  /* For tablets and below, reduce the number of columns to 2 */
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices, stack the sections vertically */
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section ul {
+    padding-left: var(--spacing-2); /* Adjust padding for very small screens */
+  }
+
+  .social-icons li {
+    margin-right: 5px; /* Reduce margin for social icons */
+  }
+
+  .footer-section img {
+    width: 25px; /* Reduce image size for very small screens */
+  }
+}
+
 
 .icon {
   font-size: 2em;
@@ -392,25 +460,19 @@ a {
 #destinations-container {
   padding: 48px 0;
   width: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 auto; /* Center the container */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
 }
 
 .destination {
   padding: 20px;
   display: flex;
   flex-direction: column;
-
 }
 
-.destination h3 {
-  margin-top: 10px;
-}
-
-.destination p {
+.destination h3, .destination p {
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -423,14 +485,34 @@ a {
   border-radius: 25px;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #destinations-container {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+  }
+
+  .destination img {
+    margin-left: 0; /* Adjust image margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #destinations-container {
+    padding: 24px 0; /* Reduce padding for very small screens */
+  }
+
+  .destination {
+    padding: 10px; /* Reduce padding within each destination for smaller screens */
+  }
+}
+
 #FAQ-container {
   padding: 48px 0;
   width: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 auto; /* Center the container */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
 }
 
 .FAQ img {
@@ -446,7 +528,6 @@ a {
   margin-bottom: auto;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #eee;
   color: #444;
@@ -458,7 +539,6 @@ a {
   outline: none;
   transition: 0.4s;
   margin-left: 10px;
-  
 }
 
 button {
@@ -480,12 +560,11 @@ button {
 }
 
 .panel.show {
-  max-height: 500px; 
+  max-height: 500px;
 }
 
-
 .accordion:after {
-  content: '\02795'; 
+  content: '\02795';
   font-size: 1rem;
   color: #777;
   float: right;
@@ -496,3 +575,31 @@ button {
   content: "\2796";
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #FAQ-container {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+  }
+
+  .FAQ img {
+    /* Optionally adjust image padding or size here */
+  }
+
+  .accordion {
+    margin-left: 0; /* Adjust if necessary for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #FAQ-container {
+    padding: 24px 0; /* Reduce padding for smaller screens */
+  }
+
+  .accordion {
+    padding: 14px; /* Adjust padding for a tighter look on small screens */
+  }
+
+  .panel {
+    /* Optionally adjust panel styling for smaller screens */
+  }
+}
