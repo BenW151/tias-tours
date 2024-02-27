@@ -13,12 +13,29 @@ document.addEventListener("DOMContentLoaded", function() {
         var accordionButton = event.target;
         var panel = accordionButton.nextElementSibling;
 
+        if (panel.style.maxHeight) {
+          // Panel is open, close it
+          panel.style.maxHeight = null;
+        } else {
+          // Open the panel
+          // First, we need to set maxHeight to 'none' to calculate the actual height
+          panel.style.maxHeight = "none";
+          var actualHeight = panel.scrollHeight + "px";
+          // Then, reset the maxHeight to 0 before setting it to its actual height, to ensure animation plays
+          panel.style.maxHeight = "0";
+          // Using requestAnimationFrame to ensure the transition plays
+          window.requestAnimationFrame(function() {
+            panel.style.maxHeight = actualHeight;
+          });
+        }
+
         accordionButton.classList.toggle("active");
-        panel.classList.toggle("show");
+        panel.classList.toggle("show"); // This might be optional based on if you rely on this class for styling
       }
     });
   }
 });
+
 
 window.addEventListener("scroll", function() {
   var nav = document.querySelector("nav");

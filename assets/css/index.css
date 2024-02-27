@@ -2,6 +2,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
+
 }
 
 html,
@@ -24,7 +26,7 @@ body {
 .logo {
   margin: 0;
   font-family: 'Playfair Display';
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--accent-secondary);
 }
@@ -32,12 +34,12 @@ body {
 #hero-container {
   position: relative;
   width: 100%;
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0;
 }
 
-.hero-image{
+.hero-image {
   width: 100%;
   height: auto;
   max-height: 750px;
@@ -58,28 +60,45 @@ body {
 
 .hero-text {
   position: absolute;
-  margin: 50px;
+  /* Adjust margin, top, and left to use more responsive units */
+  margin: 2vw; /* Example adjustment */
   top: 20%;
-  left: var(--spacing-3);
+  left: 5%; /* Adjust based on your design */
   color: white;
   padding: 0;
   grid-column: 1 / span 1;
-
+  max-width: 90%; /* Ensure text does not overflow the hero image */
 }
 
 .hero-text p {
-  padding: 0; 
+  padding: 0;
+  /* Example of responsive font size adjustment */
+  font-size: calc(14px + 1vw); /* Adjust base size and scale factor as needed */
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #hero-container {
+    grid-template-columns: 1fr; /* Adjust grid for smaller screens */
+  }
+  
+  .hero-text {
+    left: 10%; /* Adjust positioning for smaller screens */
+    top: 15%; /* Adjust positioning to ensure visibility */
+    max-width: 80%; /* Allow more space for text */
+  }
+}
+
 
 h1 {
   font-family: 'Playfair Display';
-  font-size: 56px;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 h2 {
   font-family: 'Playfair Display';
-  font-size: 46px;
+  font-size: 2.5rem;
   font-weight: 600;
   padding-left: var(--spacing-3);
 }
@@ -87,7 +106,7 @@ h2 {
 h3, h4, h5, h6 {
   font-family: 'Playfair Display';
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2rem;
   margin: 0;
   margin-bottom: var(--spacing-2);
   padding: 0 var( --spacing-3);
@@ -163,6 +182,10 @@ nav {
 
 
 @media only screen and (max-width: 768px) {
+
+  html {
+    font-size: 90%; /* Reducing the base size on smaller screens */
+  }
 
   nav {
     position: fixed;
@@ -316,11 +339,12 @@ a {
 
 #services-container {
   padding: 48px 0;
-  width: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  /* Adjusted to use max-width for better control and auto margin for centering */
+  max-width: 90%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* Start with 2 columns on smaller screens and increase as the screen widens */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax() as needed for your content */
   gap: 20px;
 }
 
@@ -328,36 +352,41 @@ a {
   padding: 20px;
   display: flex;
   flex-direction: column;
-
+  /* Ensures content does not overflow its container */
+  overflow: hidden;
 }
 
-.service h3 {
+.service h3,
+.service p,
+.service img,
+.service a {
+  /* Removed specific margin and padding settings that might cause overflow */
   margin-top: 10px;
-}
-
-.service p {
-  margin-top: 10px;
-  margin-bottom: 0;
+  width: auto; /* Allow these elements to fill their containers */
 }
 
 .service img {
-  margin-top: 0;
-  margin-left: 10px;
-  width: 50px;
+  /* Adjusted to ensure the image is responsive and does not overflow its container */
+  max-width: 50px; /* Make image responsive */
+  height: auto;
+  margin: 10px; /* Center image */
   padding: 10px;
   background-color: var(--accent-main);
   border-radius: 50%;
 }
 
 .service a {
-  margin: 20px 20px;
-  justify-content: center; 
-  width: 100px;
+  /* Adjustments to ensure link/button does not overflow its container */
+  margin: 20px auto; /* Center the link/button */
+  justify-content: center;
+  width: auto; /* Allow it to grow as needed */
+  max-width: 100px; /* Maximum width to maintain appearance */
   display: flex;
   padding: 10px 20px;
   border-radius: 30px;
   background-color: var(--accent-main);
-  color: var(--accent-secondary); 
+  color: var(--accent-secondary);
+  overflow: hidden; /* Prevent text overflow */
 }
 
 #destinations-container {
@@ -435,7 +464,7 @@ a {
 button {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .active, .accordion:hover {
@@ -447,7 +476,7 @@ button {
   background-color: white;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 .panel.show {
@@ -457,7 +486,7 @@ button {
 
 .accordion:after {
   content: '\02795'; 
-  font-size: 13px;
+  font-size: 1rem;
   color: #777;
   float: right;
   margin-left: 5px;
