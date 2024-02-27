@@ -21,11 +21,13 @@ body {
   --font-color: #323232;
   --accent-main: #F2DDD5;
   --accent-secondary: #535473;
+  --font-family-primary: 'Playfair Display', serif;
+  --font-family-secondary: 'Open Sans', sans-serif;
 }
 
 .logo {
   margin: 0;
-  font-family: 'Playfair Display';
+  font-family: var(--font-family-primary);
   font-size: 3rem;
   font-weight: 700;
   color: var(--accent-secondary);
@@ -62,55 +64,35 @@ body {
 
 .hero-text {
   position: absolute;
-  /* Adjust margin, top, and left to use more responsive units */
-  margin: 2vw; /* Example adjustment */
+  margin: 2vw;
   top: 20%;
-  left: 5%; /* Adjust based on your design */
+  left: 5%; 
   color: white;
   padding: 0;
   grid-column: 1 / span 1;
-  max-width: 90%; /* Ensure text does not overflow the hero image */
+  max-width: 90%; 
 }
 
 .hero-text p {
   padding: 0;
-  /* Example of responsive font size adjustment */
-  font-size: calc(14px + 1vw); /* Adjust base size and scale factor as needed */
+  font-size: calc(14px + 1vw);
 }
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .logo {
-    color: #FFFFFF;
-  }
-
-  #hero-container {
-    grid-template-columns: 1fr; /* Adjust grid for smaller screens */
-  }
-  
-  .hero-text {
-    left: 10%; /* Adjust positioning for smaller screens */
-    top: 15%; /* Adjust positioning to ensure visibility */
-    max-width: 80%; /* Allow more space for text */
-  }
-}
-
 
 h1 {
-  font-family: 'Playfair Display';
+  font-family: var(--font-family-primary);
   font-size: 3rem;
   font-weight: 700;
 }
 
 h2 {
-  font-family: 'Playfair Display';
+  font-family: var(--font-family-primary);
   font-size: 2.5rem;
   font-weight: 600;
   padding-left: var(--spacing-3);
 }
 
 h3, h4, h5, h6 {
-  font-family: 'Playfair Display';
+  font-family: var(--font-family-primary);
   font-weight: 600;
   font-size: 2rem;
   margin: 0;
@@ -123,7 +105,7 @@ p {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-secondary);
   font-weight: 400;
   margin: 0;
   display: flex;
@@ -189,64 +171,13 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
-
-@media only screen and (max-width: 768px) {
-
-  html {
-    font-size: 90%; /* Reducing the base size on smaller screens */
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-
-  .burger-menu {
-    display: block; /* Show on smaller screens */
-  }
-
-  .navigation-items {
-    display: none; /* Hide initially on smaller screens */
-    position: absolute;
-    top: 70px; /* Adjust as needed */
-    left: 0;
-    background-color: #fff;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-
-  .navigation-item {
-    margin: 10px 0;
-  }
-
-  .navigation-items.nav-open {
-    display: flex; 
-    flex-direction: column; 
-    position: absolute;
-    top: 70px;
-    left: 0; 
-    background-color: #fff; 
-    width: 100%;
-    padding: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-}
-
-
-
 #about-container {
   padding: 48px 0;
   width: 90%;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns for larger screens */
+  grid-template-columns: repeat(2, 1fr); 
 }
 
 .about {
@@ -261,7 +192,7 @@ nav {
 }
 
 .about img {
-  border-radius: 25px;
+  border-radius: var(--border-radius);
   max-width: 80%;
   max-height: 80%;
   overflow: hidden;
@@ -279,34 +210,6 @@ nav {
   background: var(--accent-main);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #about-container {
-    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
-  }
-  
-  .about img {
-    max-width: 100%; /* Allow images to scale up on smaller screens */
-    max-height: 100%;
-  }
-
-  .about .button {
-    width: auto; /* Adjust button width to fit content on smaller screens */
-    padding: 10px 20px; /* Adjust padding if necessary for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  #about-container {
-    padding: 24px 0; /* Reduce padding for very small screens */
-  }
-  
-  .about {
-    padding: 10px; /* Reduce padding within each .about section for smaller screens */
-  }
-}
-
-
 .instagram-widget {
   margin: 50px;
 }
@@ -320,8 +223,7 @@ footer {
   width: 100%;
   display: grid;
   gap: 20px;
-  /* Adjust the grid layout for different screen sizes */
-  grid-template-columns: repeat(4, 1fr); /* Default layout for larger screens */
+  grid-template-columns: repeat(4, 1fr); 
 }
 
 .footer-section {
@@ -358,40 +260,6 @@ footer {
   color: var(--accent-main);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  /* For tablets and below, reduce the number of columns to 2 */
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  /* For mobile devices, stack the sections vertically */
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-section {
-    padding: 20px; /* Reduce padding for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-section ul {
-    padding-left: var(--spacing-2); /* Adjust padding for very small screens */
-  }
-
-  .social-icons li {
-    margin-right: 5px; /* Reduce margin for social icons */
-  }
-
-  .footer-section img {
-    width: 25px; /* Reduce image size for very small screens */
-  }
-}
-
-
 .icon {
   font-size: 2em;
   color: var(--font-color);
@@ -406,12 +274,10 @@ a {
 
 #services-container {
   padding: 48px 0;
-  /* Adjusted to use max-width for better control and auto margin for centering */
   max-width: 90%;
   margin: 0 auto;
   display: grid;
-  /* Start with 2 columns on smaller screens and increase as the screen widens */
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax() as needed for your content */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
@@ -419,7 +285,6 @@ a {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  /* Ensures content does not overflow its container */
   overflow: hidden;
 }
 
@@ -427,42 +292,39 @@ a {
 .service p,
 .service img,
 .service a {
-  /* Removed specific margin and padding settings that might cause overflow */
   margin-top: 10px;
-  width: auto; /* Allow these elements to fill their containers */
+  width: auto; 
 }
 
 .service img {
-  /* Adjusted to ensure the image is responsive and does not overflow its container */
-  max-width: 50px; /* Make image responsive */
+  max-width: 50px;
   height: auto;
-  margin: 10px; /* Center image */
+  margin: 10px; 
   padding: 10px;
   background-color: var(--accent-main);
   border-radius: 50%;
 }
 
 .service a {
-  /* Adjustments to ensure link/button does not overflow its container */
-  margin: 20px auto; /* Center the link/button */
+  margin: 20px auto; 
   justify-content: center;
-  width: auto; /* Allow it to grow as needed */
-  max-width: 100px; /* Maximum width to maintain appearance */
+  width: auto; 
+  max-width: 100px; 
   display: flex;
   padding: 10px 20px;
   border-radius: 30px;
   background-color: var(--accent-main);
   color: var(--accent-secondary);
-  overflow: hidden; /* Prevent text overflow */
+  overflow: hidden; 
 }
 
 #destinations-container {
   padding: 48px 0;
   width: 90%;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
 }
 
 .destination {
@@ -481,37 +343,17 @@ a {
   margin-left: 10px;
   width: 100%;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #destinations-container {
-    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
-  }
-
-  .destination img {
-    margin-left: 0; /* Adjust image margin for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  #destinations-container {
-    padding: 24px 0; /* Reduce padding for very small screens */
-  }
-
-  .destination {
-    padding: 10px; /* Reduce padding within each destination for smaller screens */
-  }
-}
 
 #FAQ-container {
   padding: 48px 0;
   width: 90%;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
 }
 
 .FAQ img {
@@ -519,7 +361,7 @@ a {
   margin-right: 10px;
   width: 100%;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
 }
 
 .accordion-container {
@@ -541,7 +383,7 @@ a {
 }
 
 button {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-secondary);
   font-weight: 400;
   font-size: 1rem;
 }
@@ -574,23 +416,104 @@ button {
   content: "\2796";
 }
 
-/* Responsive adjustments */
+/* Responsive design for mobile */
 @media (max-width: 768px) {
+  .logo {
+    color: #FFFFFF;
+  }
+
+  #hero-container {
+    grid-template-columns: 1fr; 
+  }
+  
+  .hero-text {
+    left: 10%; 
+    top: 15%; 
+    max-width: 80%; 
+  }
+  html {
+    font-size: 90%; 
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .navigation-items {
+    display: none; 
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navigation-item {
+    margin: 10px 0;
+  }
+
+  .navigation-items.nav-open {
+    display: flex; 
+    flex-direction: column; 
+    position: absolute;
+    top: 70px;
+    left: 0; 
+    background-color: #fff; 
+    width: 100%;
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  #about-container {
+    grid-template-columns: 1fr; 
+  }
+  
+  .about img {
+    max-width: 100%; 
+    max-height: 100%;
+  }
+
+  .about .button {
+    width: auto; 
+    padding: 10px 20px; 
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    padding: 20px; 
+  }
+  #destinations-container {
+    grid-template-columns: 1fr;
+  }
+
+  .destination img {
+    margin-left: 0; 
+  }
   #FAQ-container {
-    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    grid-template-columns: 1fr;
   }
 
   .accordion {
-    margin-left: 0; /* Adjust if necessary for smaller screens */
+    margin-left: 0; 
   }
 }
 
-@media (max-width: 480px) {
-  #FAQ-container {
-    padding: 24px 0; /* Reduce padding for smaller screens */
-  }
 
-  .accordion {
-    padding: 14px; /* Adjust padding for a tighter look on small screens */
+/* Responsive design for tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
