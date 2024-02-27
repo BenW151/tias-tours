@@ -1,9 +1,10 @@
+//burger menu
 function toggleMenu() {
   var navigationItems = document.querySelector('.navigation-items');
   navigationItems.classList.toggle('nav-open');
 }
 
-
+//accordion
 document.addEventListener("DOMContentLoaded", function() {
   var accordionContainer = document.querySelector(".accordion-container");
 
@@ -17,36 +18,44 @@ document.addEventListener("DOMContentLoaded", function() {
           // Panel is open, close it
           panel.style.maxHeight = null;
         } else {
-          // Open the panel
-          // First, we need to set maxHeight to 'none' to calculate the actual height
           panel.style.maxHeight = "none";
           var actualHeight = panel.scrollHeight + "px";
-          // Then, reset the maxHeight to 0 before setting it to its actual height, to ensure animation plays
           panel.style.maxHeight = "0";
-          // Using requestAnimationFrame to ensure the transition plays
           window.requestAnimationFrame(function() {
             panel.style.maxHeight = actualHeight;
           });
         }
 
         accordionButton.classList.toggle("active");
-        panel.classList.toggle("show"); // This might be optional based on if you rely on this class for styling
+        panel.classList.toggle("show"); 
       }
     });
   }
 });
 
-
+//sticky nav bar on scroll
 window.addEventListener("scroll", function() {
   var nav = document.querySelector("nav");
 
-  if (window.innerWidth <= 768) { // Only for mobile screens
+  if (window.innerWidth <= 768) { 
     if (window.scrollY > 0) {
-      nav.classList.add("scrolled"); // Add a class when scrolled
+      nav.classList.add("scrolled"); 
     } else {
-      nav.classList.remove("scrolled"); // Remove the class when at the top
+      nav.classList.remove("scrolled"); 
     }
   }
 });
 
+//instagram widget PC/mobile
+function adjustIframeSrc() {
+  var iframe = document.getElementById('lightwidgetFrame');
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
+  if (screenWidth <= 768) { 
+    iframe.src = "//lightwidget.com/widgets/efbab0a9a2eb507f8e0bc297ae24055c.html";
+  } else {
+    iframe.src = "//lightwidget.com/widgets/1a06c33f58bd55069e91577c335a2fd4.html";
+  }
+}
+window.addEventListener('load', adjustIframeSrc);
+window.addEventListener('resize', adjustIframeSrc);

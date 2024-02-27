@@ -81,6 +81,8 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
 
+
+
   .logo {
     color: #FFFFFF;
   }
@@ -581,10 +583,6 @@ button {
     grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
   }
 
-  .FAQ img {
-    /* Optionally adjust image padding or size here */
-  }
-
   .accordion {
     margin-left: 0; /* Adjust if necessary for smaller screens */
   }
@@ -597,9 +595,5 @@ button {
 
   .accordion {
     padding: 14px; /* Adjust padding for a tighter look on small screens */
-  }
-
-  .panel {
-    /* Optionally adjust panel styling for smaller screens */
   }
 }
