@@ -4,6 +4,8 @@ function toggleMenu() {
   navigationItems.classList.toggle('nav-open');
 }
 
+
+
 //accordion
 document.addEventListener("DOMContentLoaded", function() {
   var accordionContainer = document.querySelector(".accordion-container");
