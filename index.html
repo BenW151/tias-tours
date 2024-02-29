@@ -4,9 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tia's Tours</title>
-  <link rel="stylesheet" href="assets/css/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></head>
-  <script type = "text/javascript" src="js/main.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script type = "text/javascript" src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <body>
   <nav>
     <h2 class="logo">Tia's Tours</h2>
@@ -21,7 +25,7 @@
       <a class="navigation-item" href="/about-us.html">About Us<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
       <a class="navigation-item" href="#destinations">Destinations<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
       <a class="navigation-item" href="#services">Services<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-      <a class="navigation-item button" href="./contact.html">Contact Us<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+      <a class="navigation-item button" href="./contact.html">Contact Us</a>
     </div>
   </nav>
 
@@ -81,11 +85,52 @@
         <div class="destination">
           <h3>Discover our Destinations</h3>
           <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
+          <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
         </div>
         <div class="destination">
-          <a href="/pakistan.html"><img src="assets/img/about-us-1.jpg"></a>
-          <h3><a href="/pakistan.html">Pakistan</a></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+        
+            <div class="carousel-inner">
+              <div class="item active">
+                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Pakistan" style="width:100%;"></a>
+                <div class="carousel-caption">
+                  <a href="/pakistan.html"><h3>Pakistan</h3></a>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                </div>
+              </div>
+        
+              <div class="item">
+                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Yemen" style="width:100%;"></a>
+                <div class="carousel-caption">
+                  <a href="/pakistan.html"><h3>Yemen</h3></a>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                </div>
+              </div>
+            
+              <div class="item">
+                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Tanzania" style="width:100%;"></a>
+                <div class="carousel-caption">
+                  <a href="/pakistan.html"><h3>Tanzania</h3></a>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                </div>
+              </div>
+          
+            </div>
+        
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -100,17 +145,17 @@
         <h3>Frequently Asked Questions</h3>
         <button class="accordion">Why Choose Us?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
         </div>
         
         <button class="accordion">Who am I?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
         </div>
         
         <button class="accordion">What is Love?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
         </div>
       </div>
     </div>
