@@ -14,7 +14,7 @@
 </head>
 <body>
   <nav>
-    <h1 class="logo">Company</h1>
+    <h1 class="logo"><a href="index.html">Company</a></h1>
     <div class="burger-menu" onclick="toggleMenu()">
       <div class="burger-line"></div>
       <div class="burger-line"></div>
@@ -23,8 +23,16 @@
 
     <div class="navigation-items">
       <a class="navigation-item" href="#hero">Home<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-      <a class="navigation-item" href="/about-us.html">About Us<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-      <a class="navigation-item" href="#destinations">Destinations<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+      <a class="navigation-item" href="about-us.html">About Us<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+      <!--<a class="navigation-item" href="#destinations">Destinations<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>-->
+      <div class="dropdown">
+        <a onclick="destinationsDropdown()" class="dropbtn navigation-item">Destinations<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+        <div id="myDropdown" class="dropdown-content">
+          <a class="navigation-item" href="about-us.html">Pakistan<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+          <a class="navigation-item" href="about-us.html">Yemen<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+          <a class="navigation-item" href="about-us.html">Tanzania<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+        </div>
+      </div>
       <a class="navigation-item" href="#services">Services<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
       <a class="navigation-item button" href="./contact.html">Contact Us</a>
     </div>
@@ -38,7 +46,7 @@
         </div>
         <div class="hero-text">
           <h1>It's a Big World Out There, Go Explore</h1>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo</h3>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo</h4>
         </div>
     </section>
 
@@ -98,25 +106,25 @@
         
             <div class="carousel-inner">
               <div class="item active">
-                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Pakistan" style="width:100%;"></a>
+                <a href="pakistan.html"><img src="assets/img/img-2.jpg" alt="Pakistan" style="width:100%;"></a>
                 <div class="carousel-caption">
-                  <a href="/pakistan.html"><h3>Pakistan</h3></a>
+                  <a href="pakistan.html"><h3>Pakistan</h3></a>
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                 </div>
               </div>
         
               <div class="item">
-                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Yemen" style="width:100%;"></a>
+                <a href="pakistan.html"><img src="assets/img/img-2.jpg" alt="Yemen" style="width:100%;"></a>
                 <div class="carousel-caption">
-                  <a href="/pakistan.html"><h3>Yemen</h3></a>
+                  <a href="pakistan.html"><h3>Yemen</h3></a>
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                 </div>
               </div>
             
               <div class="item">
-                <a href="/pakistan.html"><img src="assets/img/img-2.jpg" alt="Tanzania" style="width:100%;"></a>
+                <a href="pakistan.html"><img src="assets/img/img-2.jpg" alt="Tanzania" style="width:100%;"></a>
                 <div class="carousel-caption">
-                  <a href="/pakistan.html"><h3>Tanzania</h3></a>
+                  <a href="pakistan.html"><h3>Tanzania</h3></a>
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                 </div>
               </div>
