@@ -17,6 +17,7 @@ body {
   --spacing-2: 12px;
   --spacing-3: 16px;
   --spacing-4: 24px;
+  --spacing-5: 40px;
   --border-radius: 12px;
   --font-color: #323232;
   --accent-primary: #323232;
@@ -24,6 +25,7 @@ body {
   --accent-tertiary: #DDDDDD;
   --background-primary: #F2F3F4;
   --background-secondary: #323232;
+  --background-opacity: rgba(0, 0, 0, 0.1);
   --font-family-primary: 'Jost', serif;
   --font-family-secondary: 'Fira Sans Condensed', sans-serif;
   --font-family-tertiary: 'PT Sans', sans-serif;
@@ -98,7 +100,7 @@ p {
   justify-content: center;
 }
 
-#about-container, #newsletter-container, #destinations-container, #FAQ-container, #services-container, #trip-about-container {
+#about-container, #newsletter-container, #destinations-container, #FAQ-container, #services-container {
   padding: 48px var(--spacing-4);
   width: 100%;
   margin: 0 auto; 
@@ -106,12 +108,12 @@ p {
   gap: 20px;
 }
 
-#about-container, #destinations-container, #FAQ-container, #newsletter-container, #trip-about-container {
+#about-container, #destinations-container, #FAQ-container, #newsletter-container {
   grid-template-columns: repeat(2, 1fr); 
 }
 
 #services-container, #FAQ-container, #newsletter-container  {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--background-opacity);
 }
 
 #services-container {
@@ -468,42 +470,108 @@ button {
 
 .itinerary {
   border: 2px solid var(--accent-primary);
+  margin-bottom: var(--spacing-3);
   padding: var(--spacing-4);
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
-.itinerary p {
-  text-align: left;
+.itinerary .itinerary_inner {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.itinerary-info {
-  padding-left: 50px;
+.itinerary h2 {
+  margin-bottom: var(--spacing-4);
 }
 
-.itinerary-flight, .itinerary-day {
-  display: flex;
-  align-items: center; /* Vertically center child elements */
-  justify-content: left; /* Align children to the start horizontally */
+.itinerary .itinerary_inner:before {
+  background: var(--background-primary);
+  content: " ";
+  display: block;
+  height: 220px;
+  left: 12px;
+  position: absolute;
+  top: 12px;
+  width: 2px;
 }
 
-.itinerary-flight::before {
-  content: '';
-  display: inline-block;
-  background-image: url("/tias-tours/assets/img/svg/airplane.svg");
-  background-size: contain; 
-  width: 2rem;
-  height: 2rem;
-  margin-right: var(--spacing-3);
-  vertical-align: middle;
+.itinerary .itinerary_inner .icon--before:before,
+.itinerary .itinerary_inner .t1:before {
+  background-color: #fff;
+  left: 0;
+  position: absolute;
+  top: 8px;
 }
 
-.itinerary-day::before {
-  content: '\25CB';
-  font-size: 2rem;
-  margin-right: var(--spacing-3);
-  vertical-align: middle;
+.itinerary .itinerary_inner dl {
+  overflow: hidden;
+  position: relative;
+}
 
+.itinerary .itinerary_inner dl dd,
+.itinerary .itinerary_inner dl dt {
+  padding-left: var(--spacing-5);
+  position: relative;
+}
+
+.itinerary .itinerary_inner dl dd:after,
+.itinerary .itinerary_inner dl dt:after {
+  background: var(--accent-primary);
+  bottom: 4px;
+  content: " ";
+  display: block;
+  height: 100%;
+  left: 11px;
+  top: 1rem;
+  position: absolute;
+  width: 2px;
+  z-index: 3;
+}
+
+.itinerary .itinerary_inner dl dt {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.itinerary .itinerary_inner dl dt:before {
+  background: var(--background-primary);
+  border: 2px solid var(--accent-primary);
+  border-radius: var(--spacing-4);
+  content: " ";
+  display: block;
+  font-size: 1.5rem;
+  height: 8px;
+  left: 8px;
+  line-height: var(--spacing-4);
+  position: absolute;
+  text-align: center;
+  top: 1rem;
+  width: 8px;
+  z-index: 4;
+}
+
+.itinerary .itinerary_inner dl dd {
+  color: var(--accent-primary);
+  font-size: 1rem !important;
+  padding-bottom: 1em;
+}
+
+.itinerary .itinerary_inner dl dd:last-child:after {
+  display: none;
+}
+
+.itinerary .itinerary_inner .button,
+.itinerary .itinerary_inner .hs-button {
+  background: #fff;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 8;
 }
 
 /* Responsive design for mobile */
@@ -544,7 +612,7 @@ button {
     width: 100%;
     height: 100vh;
     padding: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px --background-opacity;
     z-index: 1000;
     align-items: center;
     justify-content: flex-start;
@@ -596,7 +664,7 @@ button {
   }
 
 
-  #about-container, #footer-container, #destinations-container, #FAQ-container, #newsletter-container, #trip-about-container {
+  #about-container, #footer-container, #destinations-container, #FAQ-container, #newsletter-container {
     grid-template-columns: 1fr; 
   }
 
@@ -615,6 +683,10 @@ button {
 
   .accordion {
     margin-left: 0; 
+  }
+
+  .itinerary {
+    width: 90%;
   }
 
 }
