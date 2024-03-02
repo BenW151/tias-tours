@@ -98,7 +98,7 @@ p {
   justify-content: center;
 }
 
-#about-container, #newsletter-container, #destinations-container, #FAQ-container, #services-container  {
+#about-container, #newsletter-container, #destinations-container, #FAQ-container, #services-container, #trip-about-container {
   padding: 48px var(--spacing-4);
   width: 100%;
   margin: 0 auto; 
@@ -106,8 +106,12 @@ p {
   gap: 20px;
 }
 
-#about-container, #destinations-container, #FAQ-container, #newsletter-container {
+#about-container, #destinations-container, #FAQ-container, #newsletter-container, #trip-about-container {
   grid-template-columns: repeat(2, 1fr); 
+}
+
+#services-container, #FAQ-container, #newsletter-container  {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #services-container {
@@ -274,6 +278,7 @@ nav {
   margin-top: 10px;
   box-sizing: border-box; 
   border-radius: 0px; 
+  border: 2px solid var(--accent-primary);
   padding: 0px 0px 0px 16px; 
   height: 50px; 
   text-align: left; 
@@ -461,6 +466,46 @@ button {
   content: "\2796";
 }
 
+.itinerary {
+  border: 2px solid var(--accent-primary);
+  padding: var(--spacing-4);
+  width: 70%;
+  margin: auto;
+}
+
+.itinerary p {
+  text-align: left;
+}
+
+.itinerary-info {
+  padding-left: 50px;
+}
+
+.itinerary-flight, .itinerary-day {
+  display: flex;
+  align-items: center; /* Vertically center child elements */
+  justify-content: left; /* Align children to the start horizontally */
+}
+
+.itinerary-flight::before {
+  content: '';
+  display: inline-block;
+  background-image: url("/tias-tours/assets/img/svg/airplane.svg");
+  background-size: contain; 
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--spacing-3);
+  vertical-align: middle;
+}
+
+.itinerary-day::before {
+  content: '\25CB';
+  font-size: 2rem;
+  margin-right: var(--spacing-3);
+  vertical-align: middle;
+
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
   .logo {
@@ -551,7 +596,7 @@ button {
   }
 
 
-  #about-container, #footer-container, #destinations-container, #FAQ-container, #newsletter-container {
+  #about-container, #footer-container, #destinations-container, #FAQ-container, #newsletter-container, #trip-about-container {
     grid-template-columns: 1fr; 
   }
 
