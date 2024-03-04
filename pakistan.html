@@ -45,7 +45,7 @@
 
   <main>
     <section id="hero">
-      <div id="hero-container" class="container">
+      <div class="container">
         <div class="hero-image">
           <img src="assets/img/hero_1.jpg" alt="photo" />
         </div>
@@ -55,50 +55,61 @@
         </div>
     </section>
 
-    <section id="about">
-      <div id="about-container" class="container two-column">
-        <div class="about">
+    <section id="trip-summary">
+      <div class="container two-column">
+        <div class="container-item">
           <h2>About The Trip</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
-          <img src="assets/img/paskistan-map.jpg">
         </div>
-        <div class="about">
-          <div class="itinerary">
-            <h2>Itinerary</h2>
-            <div class="itinerary-inner">
-              <dl data-itinerary="standard">
-                <dt>Day 1</dt>
-                <dd>Arrival in Cairo (CAI) | Cairo food tour</dd>
-                <dt>Day 2</dt>
-                <dd>Giza Pyramids </dd>
-                <dt>Day 3</dt>
-                <dd>Egyptian Museum | Evening flight to Aswan</dd>
-                <dt>Day 4</dt>
-                <dd>St Simeon Monastery | Free time in Aswan</dd>
-                <dt>Day 5</dt>
-                <dd>Nile cruise | Nubian feast</dd>
-                <dt>Day 6</dt>
-                <dd>Karnak | Luxor Temple</dd>
-                <dt>Day 7</dt>
-                <dd>Valley of Kings & Queens </dd>
-                <dt>Day 8</dt>
-                <dd>Departure from Luxor (LXR)</dd>
-                <dt>Day 9</dt>
-                <dd>Departure from Luxor (LXR)</dd>
-                <dt>Day 10</dt>
-                <dd>Departure from Luxor (LXR)</dd>
-              </dl>      
-            </div>
+        <div class="container-item itinerary">
+          <h2>Itinerary</h2>
+          <div class="itinerary-inner">
+            <dl data-itinerary="standard">
+              <dt>Day 1</dt>
+              <dd>Arrival in Cairo (CAI) | Cairo food tour</dd>
+              <dt>Day 2</dt>
+              <dd>Giza Pyramids </dd>
+              <dt>Day 3</dt>
+              <dd>Egyptian Museum | Evening flight to Aswan</dd>
+              <dt>Day 4</dt>
+              <dd>St Simeon Monastery | Free time in Aswan</dd>
+              <dt>Day 5</dt>
+              <dd>Nile cruise | Nubian feast</dd>
+              <dt>Day 6</dt>
+              <dd>Karnak | Luxor Temple</dd>
+              <dt>Day 7</dt>
+              <dd>Valley of Kings & Queens </dd>
+              <dt>Day 8</dt>
+              <dd>Departure from Luxor (LXR)</dd>
+              <dt>Day 9</dt>
+              <dd>Departure from Luxor (LXR)</dd>
+              <dt>Day 10</dt>
+              <dd>Departure from Luxor (LXR)</dd>
+            </dl>      
           </div>
         </div>
-        <div class="about">
+        <div class="container-item">
+          <img src="assets/img/paskistan-map.jpg">
         </div>
+        <div class="container-item">
+          <h2>What's Included</h2>
+          <ul>
+            <li>8 Nights Accomodation</li>
+            <li>Breakfast, Lunch and Dinner Each Day</li>
+            <li>All Activities Mentioned</li>
+            <li>All Transport Except Flights</li>
+            <li>All Transport Except Flights</li>
+            <li>All Transport Except Flights</li>
+            <li>All Transport Except Flights</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
     <section id="faq">
-      <div id="faq-container destination-faq" class="container">
+      <div class="container">
         <div class="accordion-container" class="container">
           <h3>Frequently Asked Questions</h3>
           <button class="accordion">Why Choose Us?</button>
@@ -131,13 +142,13 @@
 
 
     <div id="newsletter">
-      <div id="newsletter-container" class="container two-column">
-        <div class="newsletter">
+      <div class="container two-column">
+        <div class="container-item">
           <h4>Sign Up To Our Newletter</h4>
           <input id="newsletter-email-input" type="email" autocomplete="email" name="email" tabindex="0" placeholder="Enter your email" aria-label="Enter your email" aria-invalid="true" options="[object Object]">
           <a class="button" href="/about-us.html">Add Me</a>
         </div>
-        <div class="newsletter">
+        <div class="container-item">
           <p>Hear about our new adventures before anyone else.</p>
           <p>Be the first to hear about exclusive Flash Pack offers.</p>
           <p>Access exciting competitions.</p>
@@ -148,13 +159,13 @@
   </main>
 
   <footer>
-    <div id="footer-container" class="container four-column">
-      <div class="footer-section">
+    <div id="footer" class="container four-column">
+      <div class="container-item">
         <h5>About</h5>
         <p>Created by Ben Ward</p>
       </div>
 
-      <div class="footer-section">
+      <div class="container-item">
         <h5>Connect</h5>
         <div class="social-icons">
           <a href="https://instagram.com/teetravels_" target="_blank"><img src="assets/img/instagram-icon.png"></a>
@@ -164,7 +175,7 @@
         </div>
       </div>
 
-      <div class="footer-section">
+      <div class="container-item">
         <h5>Links</h5>
         <div class="footer-navigation-items">
           <a class="footer-navigation-item" href="#hero">Home</a>
@@ -175,7 +186,7 @@
         </div>
       </div>
 
-      <div class="footer-section  grid-container">
+      <div class="container-item">
         <h5>Contact</h5>
         <div class="footer-contact-items">
           <a href="mailto:benward151@gmail.com">benward151@gmail.com</a>
