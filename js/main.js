@@ -7,6 +7,7 @@ function toggleMenu() {
 //destinations dropdown
 function destinationsDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("navDropdown").classList.toggle("active");
 }
 
 window.onclick = function(event) {

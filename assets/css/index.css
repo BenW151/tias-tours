@@ -179,7 +179,7 @@ nav {
   background-color: var(--background-primary);
 }
 
-.logo a:hover, .logo a:active  {
+.no-hover-styling:hover, .no-hover-styling:active  {
   color: var(--font-color);
   text-decoration: none;
 }
@@ -196,6 +196,11 @@ nav {
 
 .navigation-item {
   margin: var(--spacing-1);
+}
+
+
+.navigation-item.icon-chevron-right::after {
+  display: none;
 }
 
 .button {
@@ -222,7 +227,7 @@ nav {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: var(--background-secondary);
 }
 
 .burger-menu {
@@ -342,13 +347,19 @@ nav {
   background-color: var(--accent-secondary);
   color: var(--accent-primary);
   cursor: pointer;
-  padding: 18px;
+  padding: var(--spacing-3);
   width: 100%;
-  text-align: left;
   border: none;
-  outline: none;
   transition: 0.4s;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.accordion.icon-expand::after {
+  display: inline-block;
+  margin-left: auto;
+  position: relative;
+  padding: 0;
 }
 
 
@@ -375,18 +386,6 @@ button {
 
 .panel.show {
   max-height: 500px;
-}
-
-.accordion:after {
-  content: '\02795';
-  font-size: 1rem;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.accordion.active:after {
-  content: "\2796";
 }
 
 .itinerary {
@@ -499,32 +498,40 @@ button {
   font-weight: 400;
 }
 
-.icon-hotel:before {
+.icon-hotel::before {
   content: "\e53a";
 }
 
-.icon-meals:before {
+.icon-meals::before {
   content: "\e56c";
 }
 
-.icon-backpack:before {
+.icon-backpack::before {
   content: "\f19c";
 }
 
-.icon-bus:before {
+.icon-bus::before {
   content: "\e530";
 }
 
-.icon-hike:before {
+.icon-hike::before {
   content: "\e50a"
 }
 
-.icon-chevron-right:after {
+.icon-chevron-right::after {
   content: "\e5cc";
 }
 
-.navigation-item.icon-chevron-right:after {
-  display: none;
+.icon-chevron-right.active::after {
+  content: "\e5cf";
+}
+
+.icon-expand::after {
+  content: "\e145";
+}
+
+.icon-expand.active::after {
+  content: "\e15b";
 }
 
 /* Responsive design for mobile */
