@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
   <script type = "text/javascript" src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -28,17 +29,17 @@
     </div>
 
     <div class="navigation-items">
-      <a class="navigation-item" href="index.html">Home<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-      <a class="navigation-item" href="about-us.html">About Us<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+      <a class="navigation-item icon-after icon-chevron-right" href="index.html">Home</a>
+      <a class="navigation-item icon-after icon-chevron-right" href="about-us.html">About Us</a>
       <div class="dropdown">
-        <a onclick="destinationsDropdown()" class="dropbtn navigation-item">Destinations<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+        <a onclick="destinationsDropdown()" class="dropbtn navigation-item  icon-after icon-chevron-right">Destinations</a>
         <div id="myDropdown" class="dropdown-content">
-          <a class="navigation-item" href="pakistan.html">Pakistan<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-          <a class="navigation-item" href="pakistan.html">Yemen<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
-          <a class="navigation-item" href="pakistan.html">Tanzania<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+          <a class="navigation-item icon-after icon-chevron-right" href="pakistan.html">Pakistan</a>
+          <a class="navigation-item icon-after icon-chevron-right" href="pakistan.html">Yemen</a>
+          <a class="navigation-item icon-after icon-chevron-right" href="pakistan.html">Tanzania</a>
         </div>
       </div>
-      <a class="navigation-item" href="#services">Services<img class="chevron-right" src="assets/img/icon/chevron-right.png"></a>
+      <a class="navigation-item icon-after icon-chevron-right" href="#services">Services</a>
       <a class="navigation-item button" href="contact.html">Contact Us</a>
     </div>
   </nav>
@@ -92,19 +93,54 @@
         <div class="container-item">
           <img src="assets/img/paskistan-map.jpg">
         </div>
-        <div class="container-item">
+        <div class="container-item included">
           <h2>What's Included</h2>
           <ul>
-            <li>8 Nights Accomodation</li>
-            <li>Breakfast, Lunch and Dinner Each Day</li>
-            <li>All Activities Mentioned</li>
-            <li>All Transport Except Flights</li>
-            <li>All Transport Except Flights</li>
-            <li>All Transport Except Flights</li>
-            <li>All Transport Except Flights</li>
+            <li class="icon-before icon-hotel">8 Nights Accomodation</li>
+            <li class="icon-before icon-meals">Breakfast, Lunch and Dinner Each Day</li>
+            <li class="icon-before icon-hike">All Activities Mentioned</li>
+            <li class="icon-before icon-bus">All Transfers Between Stops</li>
           </ul>
         </div>
 
+      </div>
+    </section>
+
+    <section id="detailed-itinerary">
+      <h2>Detailed Itinerary</h2>
+      <div class="container two-column">
+        <div class="container-item">
+          <h3>Day 1</h3>
+          <h4>Day Description</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
+        </div>
+        <div class="container-item">
+          <img src="assets/img/img-3.jpg">
+        </div>
+        <div class="container-item">
+          <h3>Day 2</h3>
+          <h4>Day Description</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
+        </div>
+        <div class="container-item">
+          <img src="assets/img/img-3.jpg">
+        </div>
+        <div class="container-item">
+          <h3>Day 3</h3>
+          <h4>Day Description</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
+        </div>
+        <div class="container-item">
+          <img src="assets/img/img-3.jpg">
+        </div>
+        <div class="container-item">
+          <h3>Day 4</h3>
+          <h4>Day Description</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue. Vivamus quis ante ut nunc lobortis gravida. Fusce lacinia eleifend massa, id feugiat leo suscipit nec. Nulla facilisi. Ut euismod nunc ut mi faucibus vestibulum. In hac habitasse platea dictumst. Integer quis risus nec purus vehicula pulvinar.</p>
+        </div>
+        <div class="container-item">
+          <img src="assets/img/img-3.jpg">
+        </div>
       </div>
     </section>
 
@@ -168,10 +204,10 @@
       <div class="container-item">
         <h5>Connect</h5>
         <div class="social-icons">
-          <a href="https://instagram.com/teetravels_" target="_blank"><img src="assets/img/instagram-icon.png"></a>
-          <a href="https://instagram.com/teetravels_" target="_blank"><img src="assets/img/instagram-icon.png"></a>
-          <a href="https://instagram.com/teetravels_" target="_blank"><img src="assets/img/instagram-icon.png"></a>
-          <a href="https://instagram.com/teetravels_" target="_blank"><img src="assets/img/instagram-icon.png"></a>
+          <a href="https://instagram.com/teetravels_" target="_blank"><img class="icon" src="assets/img/instagram-icon.png"></a>
+          <a href="https://instagram.com/teetravels_" target="_blank"><img class="icon" src="assets/img/instagram-icon.png"></a>
+          <a href="https://instagram.com/teetravels_" target="_blank"><img class="icon" src="assets/img/instagram-icon.png"></a>
+          <a href="https://instagram.com/teetravels_" target="_blank"><img class="icon" src="assets/img/instagram-icon.png"></a>
         </div>
       </div>
 
