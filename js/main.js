@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
-
 //sticky nav bar on scroll
 window.addEventListener("scroll", function() {
   var nav = document.querySelector("nav");
@@ -101,3 +99,31 @@ function adjustIframeSrc() {
 }
 window.addEventListener('load', adjustIframeSrc);
 window.addEventListener('resize', adjustIframeSrc);
+
+//newsletter email input validation
+document.addEventListener('DOMContentLoaded', function() {
+  var emailInput = document.getElementById('mce-EMAIL');
+  var submitButton = document.getElementById('mc-embedded-subscribe');
+  var errorMessage = document.getElementById('email-error');
+  
+  function validateEmail() {
+    var emailValue = emailInput.value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email pattern for validation
+    
+    if (emailValue === '') { // If email field is empty
+      errorMessage.style.display = 'none'; // Hide error message
+      submitButton.disabled = true; // Keep the Subscribe button disabled
+    } else if (emailPattern.test(emailValue)) {
+      errorMessage.style.display = 'none'; // Hide error message
+      submitButton.disabled = false; // Enable the Subscribe button
+    } else {
+      errorMessage.style.display = 'block'; // Show error message
+      submitButton.disabled = true; // Disable the Subscribe button
+    }
+  }
+  
+  emailInput.addEventListener('input', validateEmail);
+  
+  // Initialize on load
+  validateEmail();
+});
