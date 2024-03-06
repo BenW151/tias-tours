@@ -18,6 +18,7 @@
   <script type = "text/javascript" src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 </head>
 <body>
   <nav>
@@ -88,7 +89,7 @@
           </div>
         </div>
         <div class="container-item">
-          <img src="assets/img/paskistan-map.jpg"  alt="photo">
+          <img src="assets/img/paskistan-map.jpg"  alt="Itinerary Map">
         </div>
         <div class="container-item included">
           <h2>What's Included</h2>
@@ -98,6 +99,12 @@
             <li class="icon-before icon-hike">All Activities Mentioned</li>
             <li class="icon-before icon-bus">All Transfers Between Stops</li>
           </ul>
+        </div>
+        <div class="container-item payment">
+          <h2>Book This Trip</h2>
+          <stripe-pricing-table pricing-table-id="prctbl_1OrIeVFkTWvVAOXOYNfdUuOO"
+          publishable-key="pk_test_51OrIWgFkTWvVAOXOM1Dh1gF6PRQygx1G3kWUuopAye9DAakPQ7BfZ8E5AccvDjQ6RBfnVz9QlRgKynLUKJePUoyt00dnAFMuEA">
+          </stripe-pricing-table>
         </div>
 
       </div>
@@ -212,7 +219,7 @@
         </div>
         <div class="container-item">
           <p>Hear about our new adventures before anyone else.</p>
-          <p>Be the first to hear about exclusive Flash Pack offers.</p>
+          <p>Be the first to hear about exclusive offers.</p>
           <p>Access exciting competitions.</p>
           <p>Receive weekly inspiration and travel stories from solos just like you.</p>
         </div>
@@ -224,7 +231,7 @@
     <div id="footer" class="container four-column">
       <div class="container-item">
         <h5>About</h5>
-        <p>Created by Ben Ward</p>
+        <p>FLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero ac nisi commodo, id ultrices elit congue.</p>
       </div>
 
       <div class="container-item">
@@ -251,8 +258,8 @@
       <div class="container-item">
         <h5>Contact</h5>
         <div class="footer-contact-items">
-          <a href="mailto:benward151@gmail.com">benward151@gmail.com</a>
-          <a href="/about-us.html">+447553 020349</a>
+          <a href="mailto:myemail@gmail.com">myemail@gmail.com</a>
+          <a href="https://wa.me/+447000000000">+447000 000000</a>
         </div>
       </div>
     </div>
