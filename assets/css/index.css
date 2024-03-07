@@ -487,6 +487,10 @@ button {
   font-size: 1.25rem;
 }
 
+.included .icon-before::before {
+  margin-right: var(--spacing-2);
+}
+
 .icon {
   vertical-align: middle;
   font-size: 2rem;
