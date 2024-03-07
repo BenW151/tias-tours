@@ -647,6 +647,11 @@ button {
     width: 100%;
   }
 
+  .no-active-styling:hover {
+    color: var(--font-color);
+    text-decoration: none;
+  }
+
 }
 
 
