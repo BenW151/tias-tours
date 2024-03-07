@@ -87,6 +87,7 @@ window.addEventListener("scroll", function() {
 });
 
 //instagram widget PC/mobile
+/*
 function adjustIframeSrc() {
   var iframe = document.getElementById('lightwidgetFrame');
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -98,7 +99,7 @@ function adjustIframeSrc() {
   }
 }
 window.addEventListener('load', adjustIframeSrc);
-window.addEventListener('resize', adjustIframeSrc);
+window.addEventListener('resize', adjustIframeSrc);*/
 
 //newsletter email input validation
 document.addEventListener('DOMContentLoaded', function() {
