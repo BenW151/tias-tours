@@ -259,6 +259,13 @@ nav {
   align-self: center;
 }
 
+#email-error {
+  display:none; 
+  color: red; 
+  margin-top: 16px; 
+  font-weight: bold;
+}
+
 #footer a {
   margin-bottom: var(--spacing-2);
 }
